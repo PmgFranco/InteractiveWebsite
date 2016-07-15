@@ -59,12 +59,12 @@ p{
 
 a{
 
-color:#ff4081;
+  color:#ff4081;
+  transition: 0.2s ease-in-out;
 }
 
 a:hover,a:active,a:focus{
-color:#212121;
-
+  color:#212121;
 }
 /*-----------------------------------------------
 *   Hero
@@ -136,27 +136,55 @@ margin-bottom:10px;
 }
 
 /*-----------------------------------------------
-*  Starters
+*  Staters
 -----------------------------------------------*/
 
-is-like{
-
+.is-liked{
     animation: flash 2s;
+}
+
+
+/*-----------------------------------------------
+*  Form
+-----------------------------------------------*/
+.form{
+    margin-bottom:10px;
+    opacity:0;
+    visibility:hidden;
+    height:0;
+}
+
+.form.is-visible{
+    opacity:1;
+    visibility:visible;
+    height: auto;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.form-input{
+    margin-bottom:30px;
+    border-bottom: 1px solid #b6b6b6;
+    width:100%;
+    border-radius:5px;
+    padding: 5px;
+}
+
+.form-label{
+    display:block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    box-sizing: border-box;
 
 }
+
 /*-----------------------------------------------
 *  Animations
 -----------------------------------------------*/
-
 @keyframes flash {
-
-    from, 50%, to {
-
-      opacity = 0;
-
-    },
-    25%, 75% to{
-
-      opacity = 1;
-    }
+  from, 50%, to {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
 }
