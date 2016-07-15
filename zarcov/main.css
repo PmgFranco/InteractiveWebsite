@@ -107,8 +107,9 @@ color:#3f51b5;
 font-size: 26px;
 }
 
-.news{
-
+.news-meta-item{
+  display:inline;
+  margin-right:15px;
 
 }
 
